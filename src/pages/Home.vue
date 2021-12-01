@@ -1,6 +1,7 @@
 <template>
+<!-- 주석 자세히 -->
   <div>
-    ddd
+    home
   </div>
 </template>
 

@@ -7,7 +7,7 @@
 <script>
 import TestView from './View'
 export default {
-  name: 'AuthenticationLayout',
+  name: 'TestLayout',
   components: {
     TestView
   }

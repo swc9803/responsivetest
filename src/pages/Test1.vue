@@ -1,7 +1,7 @@
 <template>
+<!-- 주석 자세히 -->
   <div class="about">
     <h1>This is an about page</h1>
-    <!-- 주석 자세히 -->
   </div>
 </template>
 

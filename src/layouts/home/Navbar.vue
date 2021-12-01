@@ -1,12 +1,12 @@
 <template>
   <div>
-    <router-view />
+    Navbar
   </div>
 </template>
 
 <script>
 export default {
-  name: 'TestView'
+
 }
 </script>
 
