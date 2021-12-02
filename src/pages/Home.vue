@@ -1,7 +1,21 @@
 <template>
 <!-- 주석 자세히 -->
   <div>
-    home
+    dd
+    <h2>home</h2>
+    <h2>home</h2>
+    <h2>home</h2>
+    <h2>home</h2>
+    <h2>home</h2>
+    <h2>home</h2>
+    <h2>home</h2>
+    <h2>home</h2>
+    <h2>home</h2>
+    <h2>home</h2>
+    <h2>home</h2>
+    <h2>home</h2>
+    <h2>home</h2>
+    <h2>home</h2>
   </div>
 </template>
 
