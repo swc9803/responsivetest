@@ -1,10 +1,10 @@
 <template>
 <!-- cont 지워도 되나 -->
   <div class="cont">
-    <Navbar />
+    <Navbar class="navbar"/>
     <div class="wrapper">
       <div class="container">
-        <HomeView />
+        <HomeView class="content"/>
       </div>
       <Footer class="footer" />
     </div>
@@ -28,18 +28,19 @@ export default {
   margin: 0;
   padding: 0;
   height: 100%;
-  .wrapper{
+  .wrapper {
     display: flex;
     flex-direction: column;
     height: 100%;
     .container {
       padding-top: 110px;
       flex: 1;
+      background: #333;
     }
     .footer {
       padding: 40px 0;
-      background: #333;
-      color: #fff;
+      background: beige;
+      color: #333;
     }
   }
 }

@@ -39,7 +39,6 @@ nav {
   width: 100%;
   padding: 40px 0;
   display: flex;
-  background: #333;
-  color: #fff;
+  background: beige;
 }
 </style>
