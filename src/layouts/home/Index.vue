@@ -24,6 +24,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+$contentcolor: #333333;
+$footercolor: #304361;
+$footertextcolor: #95AD4E;
 .cont {
   margin: 0;
   padding: 0;
@@ -35,12 +38,12 @@ export default {
     .container {
       padding-top: 110px;
       flex: 1;
-      background: #333;
+      background: $contentcolor;
     }
     .footer {
       padding: 40px 0;
-      background: beige;
-      color: #333;
+      background: $footercolor;
+      color: $footertextcolor;
     }
   }
 }
