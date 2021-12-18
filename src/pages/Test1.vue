@@ -1,16 +1,34 @@
 <template>
-<!-- 주석 자세히 -->
-  <div class="about">
-    <h1>This is an about page</h1>
+  <div class="wrapper">
+    <img class="item" src="@/assets/pizza.png">
+    <img class="item" src="@/assets/pizza.png">
+    <img class="item" src="@/assets/pizza.png">
   </div>
 </template>
 
 <script>
+import { onMounted } from 'vue'
+import { gsap } from 'gsap'
+
 export default {
-  name: 'View'
+  setup () {
+    onMounted(() => {
+      gsap.to('.item', { xPercent: -200, duration: 2, ease: 'none', repeat: -1 })
+    })
+  }
 }
 </script>
 
 <style lang="scss" scoped>
+.wrapper {
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 0px;
+  transform: rotate( 45deg );
+  .item {
+    width: 100%;
+    display: inline-block;
+  }
+}
 
 </style>

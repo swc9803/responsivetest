@@ -24,8 +24,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-$contentcolor: #333333;
-$footercolor: #304361;
+$contentcolor: #444444;
+$footercolor: #222222;
 $footertextcolor: #95AD4E;
 .cont {
   margin: 0;

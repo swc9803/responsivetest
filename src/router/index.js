@@ -3,6 +3,7 @@ import HomeLayout from '@/layouts/home/Index'
 import TestLayout from '@/layouts/test/Index'
 import Home from '@/pages/Home'
 import Test1 from '@/pages/Test1'
+import Test2 from '@/pages/Test2'
 
 const routes = [
   {
@@ -25,6 +26,11 @@ const routes = [
         path: '/test1',
         name: 'Test1',
         component: Test1
+      },
+      {
+        path: '/test2',
+        name: 'Test2',
+        component: Test2
       }
     ]
   }
