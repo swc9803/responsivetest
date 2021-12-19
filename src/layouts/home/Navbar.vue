@@ -23,7 +23,7 @@
 
 <script>
 import { onMounted } from 'vue'
-import { gsap, Power4 } from 'gsap'
+import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 gsap.registerPlugin(ScrollTrigger)
 
@@ -36,14 +36,20 @@ export default {
         paused: true,
         duration: 0.5,
         background: '#222222',
-        ease: Power4
+        ease: 'none'
+      }).progress(1)
+      const textUp = gsap.from('li', {
+        yPercent: 16,
+        paused: true,
+        duration: 0.5,
+        ease: 'none'
       }).progress(1)
       const symbolUp = gsap.from('.symbol', {
         scale: 0.9,
         yPercent: 10,
         paused: true,
         duration: 0.5,
-        ease: Power4
+        ease: 'none'
       }).progress(1)
 
       ScrollTrigger.create({
@@ -51,6 +57,7 @@ export default {
         end: 'bottom',
         onUpdate: (self) => {
           self.direction === -1 ? navUp.play() : navUp.reverse()
+          self.direction === -1 ? textUp.play() : textUp.reverse()
           self.direction === -1 ? symbolUp.play() : symbolUp.reverse()
         }
       })
@@ -63,28 +70,25 @@ export default {
 nav {
   position: fixed;
   width: 100%;
+  height: 100px;
   font-size: 1em;
  .menu {
-    color: #95AD4E;
     list-style: none;
     padding-left: 0;
     height: 60px;
     display: flex;
     justify-content: space-evenly;
-    .symbol {
+    // .symbol {
       // width: 50%;
-    }
+    // }
     li {
       // width: 10%;
       padding: 4px;
-      padding-top: 14px;
+      padding-top: 20px;
       display: inline-block;
       cursor: pointer;
-      h4, p {
+      h4 {
         margin: 0;
-      }
-      p {
-        font-size: 12px;
       }
     }
   }

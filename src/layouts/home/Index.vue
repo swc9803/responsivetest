@@ -1,50 +1,40 @@
 <template>
-<!-- cont 지워도 되나 -->
-  <div class="cont">
-    <Navbar class="navbar"/>
-    <div class="wrapper">
-      <div class="container">
-        <HomeView class="content"/>
-      </div>
-      <Footer class="footer" />
-    </div>
-  </div>
+  <Navbar class="navbar" />
+  <HomeView class="content"/>
+  <Footer class="footer" />
+  <GoTop />
 </template>
 
 <script>
 import HomeView from './View'
 import Navbar from './Navbar'
 import Footer from './Footer'
+import GoTop from '@/components/GoTop'
+
 export default {
   name: 'HomeLayout',
   components: {
-    HomeView, Navbar, Footer
+    HomeView, Navbar, Footer, GoTop
   }
 }
 </script>
 
 <style lang="scss" scoped>
+$maincolor: #95AD4E;
 $contentcolor: #444444;
 $footercolor: #222222;
-$footertextcolor: #95AD4E;
-.cont {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  .wrapper {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    .container {
-      padding-top: 110px;
-      flex: 1;
-      background: $contentcolor;
-    }
-    .footer {
-      padding: 40px 0;
-      background: $footercolor;
-      color: $footertextcolor;
-    }
-  }
+
+.navbar {
+  color: $maincolor;
+}
+.content {
+  padding-top: 110px;
+  background: $contentcolor;
+}
+.footer {
+  padding: 40px 0;
+  margin-top: -20px;
+  background: $footercolor;
+  color: $maincolor;
 }
 </style>
