@@ -19,10 +19,9 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 $maincolor: #95AD4E;
 $contentcolor: #444444;
-$footercolor: #222222;
 
 .navbar {
   color: $maincolor;
@@ -33,8 +32,15 @@ $footercolor: #222222;
 }
 .footer {
   padding: 40px 0;
-  margin-top: -20px;
-  background: $footercolor;
+  margin: -20px 0 0 0;
+  background: $contentcolor;
   color: $maincolor;
+  text-align: center;
+}
+hr {
+  width: 90vw;
+  height: 0.8px;
+  background: $maincolor;
+  margin-bottom: 40px;
 }
 </style>

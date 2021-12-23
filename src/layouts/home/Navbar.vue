@@ -79,7 +79,7 @@ nav {
     display: flex;
     justify-content: space-evenly;
     // .symbol {
-      // width: 50%;
+    //   width: 50%;
     // }
     li {
       // width: 10%;

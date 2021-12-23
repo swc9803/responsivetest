@@ -1,6 +1,7 @@
 <template>
   <div>
-    <h2>dd</h2>
+    <hr>
+    Footer
   </div>
 </template>
 

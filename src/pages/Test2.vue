@@ -2,7 +2,8 @@
   <div class="wrapper">
     <input type="checkbox">
     <div class="video">
-      <video src="https://www.robmillsarchitects.com/files/land/city/RMA_Web_land_city_1.mp4" loop muted autoplay playsinline></video>
+      <video src="https://www.robmillsarchitects.com/files/land/city/RMA_Web_land_city_1.mp4"
+      loop muted autoplay playsinline></video>
     </div>
     <div class="text">
       <span data-text="Watch the video"></span>
@@ -10,33 +11,13 @@
   </div>
 </template>
 
-<script>
-import { onMounted } from 'vue'
-import { gsap } from 'gsap'
-
-export default {
-  setup () {
-    onMounted(() => {
-      gsap.to('.item', { xPercent: -200, duration: 2, ease: 'none', repeat: -1 })
-    })
-  }
-}
-</script>
-
 <style lang="scss" scoped>
 .wrapper {
-  --color: #1F242D;
-  --color-invert: #ffffff;
-  --clip-path: circle(15px at left);
-  --clip-path-hover: circle(70px at left);
-  --clip-path-clicked: circle(100vw at left);
-  --duration: .4s;
-  --timing-function: ease;
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  width: 100vw;
   .video {
     height: 100vh;
     overflow: hidden;
@@ -44,8 +25,8 @@ export default {
     justify-content: center;
     align-items: center;
     margin-left: 15px;
-    clip-path: var(--clip-path);
-    transition: clip-path var(--duration) var(--timing-function);
+    clip-path: circle(15px at left);
+    transition: clip-path .4s ease;
     video {
       position: fixed;
       background: #c4cbde;
@@ -60,11 +41,9 @@ export default {
   }
   .text {
     position: relative;
-    text-transform: uppercase;
     font-weight: 600;
-    letter-spacing: .2px;
-    opacity: var(--opacity, 1);
-    transition: opacity .3s var(--timing-function) .2s;
+    opacity: 1;
+    transition: opacity .3s ease .2s;
     &::before,
     &::after {
       content:"";
@@ -75,15 +54,15 @@ export default {
       height: 0;
     }
     &::before {
-      box-shadow: 26px 0 0 1px var(--color);
-      right: var(--r, 100%);
-      opacity: var(--opacity, 0);
+      box-shadow: 26px 0 0 1px #1F242D;
+      right: 25px, 100%;
+      opacity: 0;
       transition: right .5s ease-in, opacity .1s linear;
     }
     &::after {
-      box-shadow: 26px 0 0 1px var(--color-invert);
-      clip-path: var(--clip-path);
-      transition: clip-path var(--duration) var(--timing-function);
+      box-shadow: 26px 0 0 1px #ffffff;
+      clip-path: circle(15px at left);
+      transition: clip-path .4s ease;
     }
     > span {
       &::before,
@@ -92,12 +71,12 @@ export default {
         padding-left: 26px;
       }
       &::before {
-        color: var(--color);
+        color: #1F242D;
       }
       &::after {
-        color: var(--color-invert);
-        clip-path: var(--clip-path);
-        transition: clip-path var(--duration) var(--timing-function);
+        color: #ffffff;
+        clip-path: circle(15px at left);
+        transition: clip-path .4s ease;
         position: absolute;
         left: 0;
       }
@@ -120,19 +99,19 @@ export default {
     }
     &:hover {
       ~ .video {
-        clip-path: var(--clip-path-hover);
+        clip-path: circle(70px at left);
       }
       ~ .text {
         &::before {
-          --r: 25px;
-          --opacity: 1;
+          right: 25px;
+          opacity: 1;
         }
         &::after {
-          clip-path: var(--clip-path-hover);
+          clip-path: circle(70px at left);
         }
         > span {
           &::after {
-            clip-path: var(--clip-path-hover);
+            clip-path: circle(70px at left);
           }
         }
       }
@@ -142,47 +121,19 @@ export default {
       height: 100%;
       border-radius: 0;
       ~ .video {
-        clip-path: var(--clip-path-clicked);
+        clip-path: circle(100vw at left);
       }
       ~ .text {
-        --opacity: 0;
-        transition: opacity .3s var(--timing-function);
+        opacity: 0;
+        transition: opacity .3s ease;
         &::after {
-          clip-path: var(--clip-path-clicked);
+          clip-path: circle(100vw at left);
         }
         > span {
           &::after {
-            clip-path: var(--clip-path-clicked);
+            clip-path: circle(100vw at left);
           }
         }
-      }
-    }
-  }
-}
-
-//--- ## BASIC #############
-body {
-  background: #E8EBF3;
-  height: 100vh;
-  font: 400 16px 'Poppins', sans-serif;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  .socials {
-    position: fixed;
-    display: block;
-    left: 20px;
-    bottom: 20px;
-    z-index: 9999;
-    > a {
-      display: block;
-      width: 30px;
-      opacity: .2;
-      transform: scale(var(--scale, .8));
-      transition: transform .3s cubic-bezier(0.38,-0.12, 0.24, 1.91);
-      &:hover {
-        --scale: 1;
       }
     }
   }
