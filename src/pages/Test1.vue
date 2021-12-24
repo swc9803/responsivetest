@@ -1,5 +1,6 @@
 <template>
-  <div class="wrapper">
+  <div class="container">
+    <!-- 1번3번 같은 이미지로 -->
     <img class="item" src="@/assets/pizza.png">
     <img class="item" src="@/assets/pizza.png">
     <img class="item" src="@/assets/pizza.png">
@@ -20,7 +21,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.wrapper {
+.container {
   overflow: hidden;
   white-space: nowrap;
   padding: 0px;

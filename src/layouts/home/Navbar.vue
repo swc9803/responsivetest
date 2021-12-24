@@ -35,7 +35,8 @@ export default {
         yPercent: -10,
         paused: true,
         duration: 0.5,
-        background: '#222222',
+        background: '#3E4043',
+        color: '#ffffff',
         ease: 'none'
       }).progress(1)
       const textUp = gsap.from('li', {
@@ -70,7 +71,7 @@ export default {
 nav {
   position: fixed;
   width: 100%;
-  height: 100px;
+  height: 10%;
   font-size: 1em;
  .menu {
     list-style: none;
@@ -78,9 +79,9 @@ nav {
     height: 60px;
     display: flex;
     justify-content: space-evenly;
-    // .symbol {
-    //   width: 50%;
-    // }
+    .symbol {
+      cursor: pointer;
+    }
     li {
       // width: 10%;
       padding: 4px;

@@ -10,10 +10,9 @@ import { onMounted } from 'vue'
 export default {
   setup () {
     onMounted(() => {
-      const content = '안녕하세요\n반갑습니다'
+      const content = '안녕하세요\n제 이름은 성우 입니다'
       const text = document.querySelector('.text')
       let i = 0
-
       function typing () {
         const txt = content[i++]
         text.innerHTML += txt === '\n' ? '<br/>' : txt
@@ -22,6 +21,7 @@ export default {
           i = 0
         }
       }
+      // settimeout
       setInterval(typing, 120)
     })
   }

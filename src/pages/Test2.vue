@@ -1,5 +1,5 @@
 <template>
-  <div class="wrapper">
+  <div class="container">
     <input type="checkbox">
     <div class="video">
       <video src="https://www.robmillsarchitects.com/files/land/city/RMA_Web_land_city_1.mp4"
@@ -12,7 +12,7 @@
 </template>
 
 <style lang="scss" scoped>
-.wrapper {
+.container {
   position: relative;
   display: flex;
   justify-content: center;

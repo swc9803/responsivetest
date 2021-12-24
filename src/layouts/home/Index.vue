@@ -20,26 +20,26 @@ export default {
 </script>
 
 <style lang="scss">
-$maincolor: #95AD4E;
-$contentcolor: #444444;
+$maincolor: #3E4043;
+$contentcolor: #ffffff;
 
 .navbar {
   color: $maincolor;
 }
 .content {
-  padding-top: 110px;
+  // padding-top: 10%;
   background: $contentcolor;
 }
 .footer {
-  padding: 40px 0;
+  padding: 40px 0 0 0;
   margin: -20px 0 0 0;
   background: $contentcolor;
   color: $maincolor;
   text-align: center;
 }
 hr {
-  width: 90vw;
-  height: 0.8px;
+  width: 80vw;
+  height: 0.5px;
   background: $maincolor;
   margin-bottom: 40px;
 }
