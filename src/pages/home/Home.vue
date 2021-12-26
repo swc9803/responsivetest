@@ -1,13 +1,7 @@
 <template>
-  <div class="container">
-    <Homepage />
-  </div>
-  <div class="container" style="background: beige">
-    <Aboutmepage />
-  </div>
-  <div class="container">
-    <Blogpage />
-  </div>
+  <Homepage />
+  <Aboutmepage style="background: beige"/>
+  <Blogpage />
 </template>
 
 <script>
@@ -24,7 +18,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.container {
-  height: 100vh;
-}
+
 </style>

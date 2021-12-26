@@ -27,7 +27,6 @@ $contentcolor: #ffffff;
   color: $maincolor;
 }
 .content {
-  // padding-top: 10%;
   background: $contentcolor;
 }
 .footer {

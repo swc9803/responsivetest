@@ -1,7 +1,7 @@
 <template>
-  <nav>
-    <ul class="menu">
-      <svg class="symbol"
+  <nav class="navbar navbar-expand-sm navbar-light">
+    <div class="container-fluid">
+      <svg class="symbol navbar-brand"
         xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 106 58">
         <g id="symbol">
           <rect id="symbolLine" width="104" height="17" x="1" y="40" fill="#FFFB9D" rx="3"/>
@@ -27,20 +27,28 @@
           </filter>
         </defs>
       </svg>
-      <li class="nav-item">
-        <a class="nav-link">Home</a>
-      </li>
-      <li class="nav-item active">
-        <router-link class="nav-link" :to="{ name: 'Myworks'}">
-          Myworks
-        </router-link>
-      </li>
-      <li class="nav-item active">
-        <router-link class="nav-link" :to="{ name: 'About'}">
-          About
-        </router-link>
-      </li>
-    </ul>
+      <!-- 창 작을때 -->
+      <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link">Home</a>
+          </li>
+          <li class="nav-item active">
+            <router-link class="nav-link" :to="{ name: 'Myworks'}">
+              Myworks
+            </router-link>
+          </li>
+          <li class="nav-item active">
+            <router-link class="nav-link" :to="{ name: 'About'}">
+              About
+            </router-link>
+          </li>
+        </ul>
+      </div>
+    </div>
   </nav>
 </template>
 
@@ -93,26 +101,19 @@ export default {
 <style lang="scss" scoped>
 nav {
   position: fixed;
-  width: 100%;
-  height: 10%;
   font-size: 1em;
- .menu {
-    list-style: none;
-    padding-left: 0;
-    height: 60px;
-    display: flex;
-    justify-content: space-evenly;
+  width: 100%;
+  z-index: 5;
+  div {
     .symbol {
+      width: 10%;
       cursor: pointer;
     }
     li {
-      padding: 4px;
-      padding-top: 20px;
+      // padding: 4px;
+      // padding-top: 20px;
       display: inline-block;
       cursor: pointer;
-      h4 {
-        margin: 0;
-      }
     }
   }
 }

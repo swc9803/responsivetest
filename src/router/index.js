@@ -1,11 +1,13 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeLayout from '@/layouts/home/Index'
 import TestLayout from '@/layouts/test/Index'
-import Home from '@/pages/Home'
-import Home2 from '@/pages/Home2'
+import Home from '@/pages/home/Home'
+import Myworks from '@/pages/home/Myworks'
+import About from '@/pages/home/About'
 import Test1 from '@/pages/Test1'
 import Test2 from '@/pages/Test2'
 import Test3 from '@/pages/Test3'
+import Test4 from '@/pages/Test4'
 
 const routes = [
   {
@@ -19,9 +21,14 @@ const routes = [
         component: Home
       },
       {
-        path: '/home2',
-        name: 'Home2',
-        component: Home2
+        path: '/myworks',
+        name: 'Myworks',
+        component: Myworks
+      },
+      {
+        path: '/About',
+        name: 'About',
+        component: About
       }
     ]
   },
@@ -43,6 +50,11 @@ const routes = [
         path: '/test3',
         name: 'Test3',
         component: Test3
+      },
+      {
+        path: '/test4',
+        name: 'Test4',
+        component: Test4
       }
     ]
   }
