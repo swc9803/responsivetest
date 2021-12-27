@@ -1,5 +1,5 @@
 <template>
-  <div class="container-fluid">
+  <div class="container">
     <p>Homepage</p>
     <p>Homepage</p>
     <p>Homepage</p>
@@ -28,7 +28,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.container-fluid {
+.container {
   overflow: hidden;
   height: 100vh;
 }

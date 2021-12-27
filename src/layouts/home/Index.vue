@@ -20,26 +20,6 @@ export default {
 </script>
 
 <style lang="scss">
-$maincolor: #3E4043;
-$contentcolor: #ffffff;
+@import '@/style/HomeColor';
 
-.navbar {
-  color: $maincolor;
-}
-.content {
-  background: $contentcolor;
-}
-.footer {
-  padding: 40px 0 0 0;
-  margin: -20px 0 0 0;
-  background: $contentcolor;
-  color: $maincolor;
-  text-align: center;
-}
-hr {
-  width: 80vw;
-  height: 0.5px;
-  background: $maincolor;
-  margin-bottom: 40px;
-}
 </style>

@@ -27,16 +27,18 @@
           </filter>
         </defs>
       </svg>
-      <li class="nav-item">
-        <a class="nav-link">Home</a>
+      <li>
+        <router-link class="move" :to="{ name: 'Home'}">
+          Home
+        </router-link>
       </li>
-      <li class="nav-item active">
-        <router-link class="nav-link" :to="{ name: 'Myworks'}">
+      <li>
+        <router-link class="move" :to="{ name: 'Myworks'}">
           Myworks
         </router-link>
       </li>
-      <li class="nav-item active">
-        <router-link class="nav-link" :to="{ name: 'About'}">
+      <li>
+        <router-link class="move" :to="{ name: 'About'}">
           About
         </router-link>
       </li>
@@ -53,25 +55,26 @@ gsap.registerPlugin(ScrollTrigger)
 export default {
   setup () {
     onMounted(() => {
-      // 위로 스크롤 시 navbar 위로
+      // navbar
       const navUp = gsap.from('nav', {
-        yPercent: -10,
         paused: true,
         duration: 0.5,
         background: '#3E4043',
         color: '#ffffff',
         ease: 'none'
       }).progress(1)
-      const textUp = gsap.from('li', {
-        yPercent: 16,
+      // 로고
+      const symbolUp = gsap.from('.symbol', {
         paused: true,
+        opacity: 0,
+        scale: 0.9,
         duration: 0.5,
         ease: 'none'
       }).progress(1)
-      const symbolUp = gsap.from('.symbol', {
-        scale: 0.9,
-        yPercent: 10,
+      // 라우터
+      const routerColor = gsap.to('a', {
         paused: true,
+        color: '#3E4043',
         duration: 0.5,
         ease: 'none'
       }).progress(1)
@@ -81,8 +84,8 @@ export default {
         end: 'bottom',
         onUpdate: (self) => {
           self.direction === -1 ? navUp.play() : navUp.reverse()
-          self.direction === -1 ? textUp.play() : textUp.reverse()
           self.direction === -1 ? symbolUp.play() : symbolUp.reverse()
+          self.direction === -1 ? routerColor.play() : routerColor.reverse()
         }
       })
     })
@@ -91,23 +94,23 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+a {
+  color: #ffffff;
+  font-weight: 600;
+}
 nav {
   position: fixed;
   width: 100%;
-  height: 10%;
+  height: 80px;
   font-size: 1em;
  .menu {
     list-style: none;
     padding-left: 0;
-    height: 60px;
+    height: 65%;
     display: flex;
     justify-content: space-evenly;
-    .symbol {
-      cursor: pointer;
-    }
     li {
-      padding: 4px;
-      padding-top: 20px;
+      line-height: 40px;
       display: inline-block;
       cursor: pointer;
       h4 {
