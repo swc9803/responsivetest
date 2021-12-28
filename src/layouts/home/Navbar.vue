@@ -1,6 +1,6 @@
 <template>
   <nav>
-    <ul class="menu">
+    <ul>
       <svg class="symbol"
         xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 106 58">
         <g id="symbol">
@@ -42,31 +42,86 @@
           About
         </router-link>
       </li>
+      <svg class="toggle" @click="toggle(), toggledata = !toggledata"
+        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 30 30">
+        <path class="toggle1" fill="#3E4043" d="M0 22.8h30V30H0z"/>
+        <path class="toggle2" fill="#3E4043" d="M0 11.4h30v7.2H0z"/>
+        <path class="toggle3" fill="#3E4043" d="M0 0h30v7.2H0z"/>
+      </svg>
     </ul>
   </nav>
 </template>
 
 <script>
-import { onMounted } from 'vue'
+import { onMounted, ref } from 'vue'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 gsap.registerPlugin(ScrollTrigger)
 
 export default {
   setup () {
+    // 토글이벤트
+    const toggledata = ref(false)
+    const toggle = () => {
+      if (toggledata.value === false) {
+        gsap.to('.toggle1', {
+          yPercent: -158,
+          ease: 'none',
+          duration: 0.2
+        })
+        gsap.to('.toggle3', {
+          yPercent: 158,
+          ease: 'none',
+          duration: 0.2
+        }, '<')
+        gsap.to('.toggle2', {
+          opacity: 0,
+          ease: 'none',
+          duration: 0.2
+        }, '<')
+        gsap.to('.toggle3', {
+          rotate: -45,
+          transformOrigin: 'center center',
+          ease: 'none',
+          duration: 0.3
+        }, '>')
+        gsap.to('.toggle1', {
+          rotate: 45,
+          transformOrigin: 'center center',
+          ease: 'none',
+          duration: 0.3
+        }, '<')
+      } else if (toggledata.value === true) {
+        gsap.to('.toggle1, .toggle3', {
+          rotate: 0,
+          transformOrigin: 'center center',
+          ease: 'none',
+          duration: 0.3
+        })
+        gsap.to('.toggle2', {
+          opacity: 1,
+          ease: 'none',
+          duration: 0.2
+        }, '>')
+        gsap.to('.toggle3, .toggle1', {
+          yPercent: 0,
+          ease: 'none',
+          duration: 0.2
+        }, '<')
+      }
+    }
+
     onMounted(() => {
       // navbar
       const navUp = gsap.from('nav', {
         paused: true,
         duration: 0.5,
         background: '#3E4043',
-        color: '#ffffff',
         ease: 'none'
       }).progress(1)
       // 로고
       const symbolUp = gsap.from('.symbol', {
         paused: true,
-        opacity: 0,
         scale: 0.9,
         duration: 0.5,
         ease: 'none'
@@ -78,6 +133,13 @@ export default {
         duration: 0.5,
         ease: 'none'
       }).progress(1)
+      // 토글
+      const toggleColor = gsap.from('.toggle1, .toggle2, .toggle3', {
+        paused: true,
+        fill: '#ffffff',
+        duration: 0.5,
+        ease: 'none'
+      }).progress(1)
 
       ScrollTrigger.create({
         start: 'top top',
@@ -86,9 +148,13 @@ export default {
           self.direction === -1 ? navUp.play() : navUp.reverse()
           self.direction === -1 ? symbolUp.play() : symbolUp.reverse()
           self.direction === -1 ? routerColor.play() : routerColor.reverse()
+          self.direction === -1 ? toggleColor.play() : toggleColor.reverse()
         }
       })
     })
+    return {
+      toggledata, toggle
+    }
   }
 }
 </script>
@@ -103,18 +169,30 @@ nav {
   width: 100%;
   height: 80px;
   font-size: 1em;
- .menu {
+  ul {
     list-style: none;
     padding-left: 0;
-    height: 65%;
+    height: 60%;
     display: flex;
     justify-content: space-evenly;
     li {
       line-height: 40px;
       display: inline-block;
-      cursor: pointer;
       h4 {
         margin: 0;
+      }
+    }
+    .toggle {
+      cursor: pointer;
+      height: 30px;
+      display: none;
+    }
+    @media screen and (max-width: 768px) {
+      a {
+        display: none;
+      }
+      .toggle {
+        display: block;
       }
     }
   }

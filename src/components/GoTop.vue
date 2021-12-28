@@ -57,7 +57,7 @@ export default {
       })
 
       const showGoTop = gsap.to('.gotop', {
-        // opacity: 0,
+        opacity: 0,
         xPercent: 40,
         cursor: 'default',
         paused: true,
