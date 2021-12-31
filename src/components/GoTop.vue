@@ -31,7 +31,7 @@ export default {
   setup () {
     // 버튼 클릭 시 최상단 이동
     const goTop = () => {
-      window.scrollTo({ top: 0, behavior: 'smooth' })
+      scrollTo({ top: 0, behavior: 'smooth' })
     }
 
     onMounted(() => {

@@ -216,7 +216,7 @@ nav {
     height: auto;
     .symbol {
       position: relative;
-      transform:translate(-50%, 0);
+      transform: translate(-50%, 0);
       left: 50%;
       width: 80px;
     }
