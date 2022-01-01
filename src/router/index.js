@@ -12,7 +12,6 @@ import Test4 from '@/pages/Test4'
 const routes = [
   {
     path: '/',
-    name: 'Home',
     component: HomeLayout,
     children: [
       {
@@ -26,7 +25,7 @@ const routes = [
         component: Myworks
       },
       {
-        path: '/About',
+        path: '/about',
         name: 'About',
         component: About
       }

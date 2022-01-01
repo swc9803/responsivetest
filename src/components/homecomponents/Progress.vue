@@ -145,6 +145,34 @@ export default {
           self.direction === -1 ? moveProgress.play() : moveProgress.reverse()
         }
       })
+      // scroll active 보이게
+      const active1 = gsap.timeline()
+      ScrollTrigger.create({
+        animation: active1,
+        trigger: '.home',
+        start: '0 0',
+        scrub: true
+      })
+      active1.to('.active1', { opacity: 1, duration: 0.01 })
+      const active2 = gsap.timeline()
+      ScrollTrigger.create({
+        animation: active2,
+        trigger: '.myworks',
+        start: '0 90%',
+        scrub: true
+      })
+      active1.to('.active1', { opacity: 0, duration: 0.01 })
+      active2.to('.active2', { opacity: 1, duration: 0.01 })
+      const active3 = gsap.timeline()
+      ScrollTrigger.create({
+        animation: active3,
+        trigger: '.about',
+        start: '-10% 90%',
+        scrub: true
+      })
+      active1.to('.active1', { opacity: 0, duration: 0.01 })
+      active2.to('.active2', { opacity: 0, duration: 0.01 })
+      active3.to('.active3', { opacity: 1, duration: 0.01 })
     })
 
     // Progress 해당 영역으로 이동
@@ -183,7 +211,6 @@ export default {
 .inside3 {
   cursor: pointer;
 }
-.active1,
 .active2,
 .active3 {
   opacity: 0;

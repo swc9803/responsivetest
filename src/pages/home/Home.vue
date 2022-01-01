@@ -19,12 +19,12 @@ export default {
 
 <style lang="scss" scoped>
 .home {
-  background: #C5F8FF;
+  background: #868686;
 }
 .myworks {
-  background: #E3FFD9;
+  background: #4e4e4e;
 }
 .about {
-  background: #FFFCB9;
+  background: #7e7e7e;
 }
 </style>
