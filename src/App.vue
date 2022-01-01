@@ -13,7 +13,7 @@
   width: 100%;
   height: 100%;
 }
-a.router-link-active {
+a.router-link-exact-active {
   border-bottom: 3px solid #FFFB9D;
 }
 a:link,

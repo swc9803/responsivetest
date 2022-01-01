@@ -3,22 +3,22 @@
     xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 293 481">
     <g filter="url(#progress_d_117_63)">
       <g class="progressbox">
-        <path class="line2" fill="#3E4043" d="M47 83.3c.5-1-.3-2.3-1.5-2.3h-23c-1.2 0-2 1.2-1.5 2.3l1.8 3a50 50 0 0 1 6.6 18.7l.1.5c.3 2.3.5 4.7.5 7V179l-1.1 16a50 50 0 0 1-7 22.2l-.9 1.5c-.5 1 .3 2.3 1.5 2.3h23c1.2 0 2-1.2 1.5-2.3l-.9-1.5a50 50 0 0 1-7-22.1L38 179v-66.4c0-2.4.2-4.8.5-7.1v-.5a50 50 0 0 1 6.7-18.7l1.8-3Z"/>
-        <path class="line1" fill="#3E4043" d="M47 255.3c.5-1-.3-2.3-1.5-2.3h-23c-1.2 0-2 1.2-1.5 2.3l1.7 3a50 50 0 0 1 6.7 18.6v.4c.4 2.3.6 4.7.6 7v66l-1.1 15.8a50 50 0 0 1-7.1 22.3l-.8 1.3c-.5 1 .3 2.3 1.5 2.3h23c1.2 0 2-1.2 1.5-2.3l-.8-1.3a50 50 0 0 1-7-22.3L38 350.3v-66c0-2.3.2-4.7.5-7v-.4a50 50 0 0 1 6.8-18.7l1.7-2.9Z"/>
+        <path class="line2" fill="#3E4043" d="M52 83.3c.5-1-.3-2.3-1.5-2.3h-23c-1.2 0-2 1.2-1.5 2.3l1.8 3a50 50 0 0 1 6.6 18.7l.1.5c.3 2.3.5 4.7.5 7V179l-1.1 16a50 50 0 0 1-7 22.2l-.9 1.5c-.5 1 .3 2.3 1.5 2.3h23c1.2 0 2-1.2 1.5-2.3l-.9-1.5a50 50 0 0 1-7-22.1L43 179v-66.4c0-2.4.2-4.8.5-7.1v-.5a50 50 0 0 1 6.7-18.7l1.8-3Z"/>
+        <path class="line1" fill="#3E4043" d="M52 255.3c.5-1-.3-2.3-1.5-2.3h-23c-1.2 0-2 1.2-1.5 2.3l1.7 3a50 50 0 0 1 6.7 18.6v.4c.4 2.3.6 4.7.6 7v66l-1.1 15.8a50 50 0 0 1-7.1 22.3l-.8 1.3c-.5 1 .3 2.3 1.5 2.3h23c1.2 0 2-1.2 1.5-2.3l-.8-1.3a50 50 0 0 1-7-22.3L43 350.3v-66c0-2.3.2-4.7.5-7v-.4a50 50 0 0 1 6.8-18.7l1.7-2.9Z"/>
         <g class="group1">
-          <path class="active1" fill="#FFFB9D" stroke="#FFD1D1" d="M63.5 65a29.5 29.5 0 1 1-59 0 29.5 29.5 0 0 1 59 0Z"/>
-          <circle class="outside1" cx="34" cy="65" r="22.5" fill="#3E4043" stroke="#FFD1D1"/>
-          <circle class="inside1" @click="goToFirst" cx="33.9" cy="64.9" r="16.9" fill="#43E8FF"/>
+          <path class="active1" fill="#FFFB9D" stroke="#FF4242" stroke-width="2" d="M73 65a34 34 0 1 1-68 0 34 34 0 0 1 68 0Z"/>
+          <circle class="outside1" cx="39" cy="65" r="22.5" fill="#3E4043" stroke="#FFD1D1"/>
+          <circle class="inside1" @click="goToFirst" cx="38.9" cy="64.9" r="16.9" fill="#43E8FF"/>
         </g>
         <g class="group2">
-          <circle class="active2" cx="34" cy="237" r="29.5" fill="#FFFB9D" stroke="#FFD1D1"/>
-          <circle class="outside2" cx="34" cy="237" r="22.5" fill="#3E4043" stroke="#FFD1D1"/>
-          <circle class="inside2" @click="goToSecond" cx="33.9" cy="236.9" r="16.9" fill="#5DFF24"/>
+          <circle class="active2" cx="39" cy="237" r="34" fill="#FFFB9D" stroke="#FF4242" stroke-width="2"/>
+          <circle class="outside2" cx="39" cy="237" r="22.5" fill="#3E4043" stroke="#FFD1D1"/>
+          <circle class="inside2" @click="goToSecond" cx="38.9" cy="236.9" r="16.9" fill="#5DFF24"/>
         </g>
         <g class="group3">
-          <circle class="active3" cx="34" cy="408" r="29.5" fill="#FFFB9D" stroke="#FFD1D1"/>
-          <circle class="outside3" cx="34" cy="408" r="22.5" fill="#3E4043" stroke="#FFD1D1"/>
-          <circle class="inside3" @click="goToThird" cx="33.9" cy="407.9" r="16.9" fill="#FDFFA5"/>
+          <circle class="active3" cx="39" cy="408" r="34" fill="#FFFB9D" stroke="#FF4242" stroke-width="2"/>
+          <circle class="outside3" cx="39" cy="408" r="22.5" fill="#3E4043" stroke="#FFD1D1"/>
+          <circle class="inside3" @click="goToThird" cx="38.9" cy="407.9" r="16.9" fill="#FDFFA5"/>
         </g>
       </g>
       <g class="boxes">
